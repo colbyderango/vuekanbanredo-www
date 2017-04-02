@@ -125,7 +125,7 @@ export default {
                 .catch(handleError)
         },
         login(userEmail, userPassword){
-            api.post('https://vuekanban.herokuapp.com/login', {
+            api.post('login', {
                 email: userEmail,
                 password: userPassword
             })
@@ -143,7 +143,7 @@ export default {
                 .catch(handleError)
         },
         register(email, name, password){
-            api.post('https://vuekanban.herokuapp.com/register', {
+            api.post('register', {
                 email: email,
                 name: name,
                 password: password
@@ -154,7 +154,7 @@ export default {
                 .catch(handleError)
         },
         logout(){
-            api.delete('https://vuekanban.herokuapp.com/logout')
+            api.delete('logout')
                 .then(res => {
                     state.user = {};
                     Materialize.toast(res.data.message, 2000);
