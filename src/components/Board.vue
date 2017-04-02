@@ -21,9 +21,6 @@
                     <button @click="triggerListForm" class="waves-effect waves-teal btn-flat"><i class="fa fa-times"></i></button>
                 </form>
             </div>
-
-            
-
             <div v-for="list in lists">
                 <list :list="list" :tasks="tasks"></list>
             </div>
@@ -75,18 +72,18 @@
                 this.listName = ''
                 this.listDesc = ''
             },
-            triggerListForm: function(){
+            triggerListForm: function () {
                 this.showListForm = !this.showListForm
                 this.showInviteForm = false
                 this.listName = ''
                 this.listDesc = ''
             },
-            triggerInviteForm: function(){
+            triggerInviteForm: function () {
                 this.showInviteForm = !this.showInviteForm
                 this.showListForm = false
                 this.inviteEmail = ''
             }
-       
+
         }
     }
 
